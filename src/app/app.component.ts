@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  // input field
- name= '';
+  // input field for name property
+ name = '';
 }
