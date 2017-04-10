@@ -1,7 +1,10 @@
+<!--Property binding-->
 <button
   class="btn btn-primary"
-  [disabled]="!allowNewServer">Add Server
-</button>
+  [disabled]="!allowNewServer">Add Server</button>
+
+<!--String interpolation-->
+<p [innerText]="allowNewServer" ></p>
 
 <app-server></app-server>
 <app-server></app-server>
