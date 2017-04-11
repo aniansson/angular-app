@@ -3,7 +3,7 @@
   [(ngModel)]="userName">
 
 <button
-  class="btn btn-primary"
-  (click)="onCreateUserName()">Create User</button>
+  class="btn btn-primary" [disabled]="userName === ''"
+  (click)="userName = ''">Reset User</button>
 
-<p>{{ userNameStatus }}</p>
+<p>{{ userName }}</p>

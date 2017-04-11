@@ -6,22 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment-2.component.css']
 })
 export class Assignment2Component implements OnInit {
-
-  userNameStatus = '';
+  
   userName = '';
 
   constructor() {
+
   }
 
   ngOnInit() {
-  }
-
-  onUpdateUserName (event:Event) {
-    this.userName = (<HTMLInputElement>event.target).value;
-  }
-
-  onCreateUserName() {
-    this.userNameStatus = 'User was created! Username is ' + this.userName;
   }
 
 }
