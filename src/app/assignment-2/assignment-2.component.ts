@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment-2.component.css']
 })
 export class Assignment2Component implements OnInit {
-  
+
   userName = '';
 
   constructor() {
