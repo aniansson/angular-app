@@ -28,8 +28,10 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
+  /* Add a name to the server that has been created*/
+
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created!';
+    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
   /* We have a HTML tag bc the type of the HTML element of the event is an html input element*/
