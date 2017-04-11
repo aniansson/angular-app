@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assignment2Component implements OnInit {
 
-  userName='';
+  userNameStatus = '';
+  userName = '';
 
   constructor() {
   }
@@ -16,11 +17,11 @@ export class Assignment2Component implements OnInit {
   }
 
   onUpdateUserName (event:Event) {
-    this.userName =(<HTMLInputElement>event.target).value;
+    this.userName = (<HTMLInputElement>event.target).value;
   }
 
   onCreateUserName() {
-    this.userName = 'User was created! User name is ' + this.userName;
+    this.userNameStatus = 'User was created! Username is ' + this.userName;
   }
 
 }
