@@ -1,11 +1,20 @@
 <label>Server Name</label>
-<input
+
+<!-- One way data binding -->
+<!--<input
   type="text"
   class="form-control"
   (input)="onUpdateServerName($event)">
-<p>{{ serverName }}</p>
+<p>{{ serverName }}</p>-->
 
 <!--for this event ($event) is simply the data that is being emitted with the event (onCreateServer)-->
+
+<!-- Two way binding-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
 
 <button
   class="btn btn-primary"
