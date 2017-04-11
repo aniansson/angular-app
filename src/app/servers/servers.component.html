@@ -1,7 +1,18 @@
+<label>Server Name</label>
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
+
+<!--for this event ($event) is simply the data that is being emitted with the event (onCreateServer)-->
+
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Server</button>
+
+<!-- Method for creating output value of property-->
 
 <!--Property binding-->
 <p [innerText]="allowNewServer" ></p>
@@ -9,7 +20,7 @@
 <!--String interpolation-->
 <p>{{ allowNewServer }}</p>
 
-<!--Output of value of property-->
+<!--Output value of property-->
 <p>{{ serverCreationStatus}}</p>
 
 <app-server></app-server>
