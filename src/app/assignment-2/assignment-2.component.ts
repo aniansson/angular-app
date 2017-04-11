@@ -7,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assignment2Component implements OnInit {
 
+  userName='';
+
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  onUpdateUserName (event:Event) {
+    this.userName =(<HTMLInputElement>event.target).value;
+  }
+
+  onCreateUserName() {
+    this.userName = 'User was created! User name is ' + this.userName;
   }
 
 }
