@@ -30,12 +30,14 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
-  /* Method for creating a server*/
+  /* Method for creating a server
+     Bindable properties and events*/
   onCreateServer() {
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
-  /* We have a HTML tag bc the type of the HTML element of the event is an html input element*/
+  /* Passing and using data with event binding
+     The HTML tag is to let TS know that the HTML element of the event is an html input element*/
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
