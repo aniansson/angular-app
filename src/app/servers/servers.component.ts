@@ -20,6 +20,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
   serverName = 'Testserver';
+  serverCreated = false;
 
   constructor() {
     setTimeout(() => {
@@ -33,6 +34,8 @@ export class ServersComponent implements OnInit {
   /* Method for creating a server
      Bindable properties and events*/
   onCreateServer() {
+    /* Using directive *ngIf*/
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
