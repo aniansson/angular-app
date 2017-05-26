@@ -1,0 +1,10 @@
+<!--String interpolation-->
+<p>Server with ID {{ serverId }} is {{ serverStatus }}</p>
+
+<!--Calling the method-->
+<p>Server with ID {{ serverId }} is {{ getServerStatus() }}</p>
+
+<!--Returns the servers name with the id + status, also changes the color of the background depending on the servers status-->
+<p [ngStyle]="{backgroundColor: getColor()}"
+   [ngClass]="{online: serverStatus === 'online'}">
+  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
