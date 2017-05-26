@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 
 /* Calling a external files*/
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
 
