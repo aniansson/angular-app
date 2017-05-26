@@ -21,6 +21,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
   serverName = 'Testserver';
   serverCreated = false;
+  servers = ['Testserver', 'Testserver 2'];
 
 
 
@@ -38,6 +39,8 @@ export class ServersComponent implements OnInit {
   onCreateServer() {
     /* Using directive *ngIf*/
     this.serverCreated = true;
+    /* Adding a new server to the servers array*/
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
