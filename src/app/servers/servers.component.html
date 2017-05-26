@@ -10,6 +10,9 @@
 
 <!--for this event ($event) is simply the data that is being emitted with the event (onCreateServer)-->
 
+<!--Returns the servers name with the id + status, also changes the color of the background depending on the servers status-->
+<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+
 <!-- Two way binding-->
 <input
   type="text"
@@ -40,10 +43,11 @@
 <!-- Using the directive *ngIf -->
 <p *ngIf="serverCreated; else noServer ">Server was created, server name is {{ serverName }}</p>
 
-<!-- Showing an alternative to the above *ngIf -->
+<!-- Showing an alternative to the above *ngIf
 <ng-template #noServer>
   <p>No server was created!</p>
 </ng-template>
+ -->
 
 <app-server></app-server>
 <app-server></app-server>
