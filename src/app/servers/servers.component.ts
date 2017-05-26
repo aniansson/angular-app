@@ -21,12 +21,10 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
   serverName = 'Testserver';
   serverCreated = false;
-  serverStatus: string = 'offline';
-  serverId: number = 10;
+
+
 
   constructor() {
-    /* 50% chance that the serverStatus will either be online or offline*/
-    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline'
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
@@ -49,12 +47,4 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 
-  getServerStatus() {
-    return this.serverStatus;
-  }
-
-  /* Method for changing the background color depending on the servers status*/
-  getColor() {
-  return this.serverStatus === 'online' ? 'green' : 'red';
-  }
 }

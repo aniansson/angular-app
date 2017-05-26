@@ -10,11 +10,6 @@
 
 <!--for this event ($event) is simply the data that is being emitted with the event (onCreateServer)-->
 
-<!--Returns the servers name with the id + status, also changes the color of the background depending on the servers status-->
-<p [ngStyle]="{backgroundColor: getColor()}"
-   [ngClass]="{online: serverStatus === 'online'}">
-  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
-
 <!-- Two way binding-->
 <input
   type="text"
